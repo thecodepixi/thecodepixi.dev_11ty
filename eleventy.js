@@ -6,6 +6,9 @@ module.exports = config => {
   config.addCollection('TIL', collection => {
     return collection.getFilteredByGlob('./src/til/*.md')
   });
+  config.addCollection('tiny-tutorials', collection => {
+    return collection.getFilteredByGlob('./src/tiny-tutorials/*.md')
+  });
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
