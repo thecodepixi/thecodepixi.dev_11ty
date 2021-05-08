@@ -1,0 +1,23 @@
+<div class="[ site-head ] [ wrapper ]">
+  <a href="/" aria-label="{{site.name}} - Home">🧚‍♂️</a>
+  <nav class="[ nav ]" aria-label="Primary">
+    <ul class="nav_list">
+      {% for item in nav.items %}
+      <li>
+        <a
+          href="{{ item.url }}"
+          class="nav_link"
+          {{
+          helpers.getLinkActiveState(item.url,
+          page.url)
+          |
+          safe
+          }}
+        >
+          {{ item.text }}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

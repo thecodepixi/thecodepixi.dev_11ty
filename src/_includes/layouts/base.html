@@ -31,6 +31,9 @@
       <a class="[ skip-link ] [ button ]" href="#main-content">
         Skip to content
       </a>
+
+      {% include "partials/nav.html" %}
+
       <main tab-index="-1" id="main-content">
         {% block content %} {{ content | safe }} {% endblock %}
       </main>

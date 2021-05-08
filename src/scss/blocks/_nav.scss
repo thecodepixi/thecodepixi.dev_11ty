@@ -1,0 +1,13 @@
+.nav {
+  line-height: 1;
+
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      padding-top: get-size('400');
+      padding-inline-start: get-size('400');
+    }
+  }
+}
