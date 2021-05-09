@@ -2,9 +2,10 @@
 
 ## NEXT UP TO DO ITEMS:
 
-- [ ] navigation data and nav partial
-- [ ] include nav partial in base layout
-- [ ] homepage layout
+- [x] navigation data and nav partial
+  - [ ] but like better styling and active page indicators tho
+- [x] include nav partial in base layout
+- [ ] homepage layout _IN PROGRESS_
 - [ ] blog layout
 - [ ] blog index
 - [ ] post list partial
