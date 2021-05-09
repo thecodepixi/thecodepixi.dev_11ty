@@ -1,0 +1,19 @@
+// $headline-highlights: ('dark', 'primary', 'secondary', 'quaternary', 'quinary');
+
+.headline {
+  font-size: map.get($size-scale, '700');
+  max-width: 18ch;
+
+  &::after {
+    content: '.';
+  }
+
+  // For each color, create an exception
+  // @each $headline-highlight in $headline-highlights {
+  //   &[data-highlight='#{$headline-highlight}'] {
+  //     &::after {
+  //       color: get-color($headline-highlight);
+  //     }
+  //   }
+  // }
+}

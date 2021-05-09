@@ -11,8 +11,11 @@
 @import 'utilities/visually-hidden';
 @import 'utilities/wrapper';
 @import 'utilities/radius';
+@import 'utilities/panel';
+@import 'utilities/headline';
 
 // import blocks
 @import 'blocks/skip-link';
 @import 'blocks/button';
 @import 'blocks/nav';
+@import 'blocks/page-header';

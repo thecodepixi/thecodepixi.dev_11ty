@@ -1,8 +1,7 @@
 ---
   title: "TheCodePixi"
-  layout: "layouts/base.html"
+  layout: "layouts/home.html"
+  summary: "Welcome to my personal site!"
 ---
 
-# This is a heading
-
-This is a paragraph
+potato 
