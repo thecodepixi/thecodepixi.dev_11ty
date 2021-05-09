@@ -3,7 +3,14 @@
     {% for post in pagePosts %}
       <li class="post_preview">
        <a href="/blog{{ post.url }}"> {{ post.data.title }}</a> | {{ post.date | dateFilter }} <br> 
-        <blockquote> {{ post.data.summary }} </blockquote> 
+        {% if post.data.summary %}
+          <blockquote> {{ post.data.summary }} </blockquote> 
+        {% endif %}
+        {% if post.data.tags %}
+          <blockquote> 
+            tags: {{ post.data.tags | tagsFilter }}
+          </blockquote> 
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

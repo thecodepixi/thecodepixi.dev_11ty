@@ -1,8 +1,10 @@
 const dateFilter = require("./src/filters/date-filter");
+const tagsFilter = require("./src/filters/tags-filter")
 
 module.exports = (config) => {
   // add filters 
   config.addFilter('dateFilter', dateFilter);
+  config.addFilter('tagsFilter', tagsFilter);
   // add collections
   config.addCollection('posts', (collection) => {
     return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
