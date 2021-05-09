@@ -1,0 +1,10 @@
+<section class="post_index wrapper">
+  <ul class="post_list flow">
+    {% for post in pagePosts %}
+      <li class="post_preview">
+       <a href="/blog{{ post.url }}"> {{ post.data.title }}</a> | {{ post.date | dateFilter }} <br> 
+        <blockquote> {{ post.data.summary }} </blockquote> 
+      </li>
+    {% endfor %}
+  </ul>
+</section>

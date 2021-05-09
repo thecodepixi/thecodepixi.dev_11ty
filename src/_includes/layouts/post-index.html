@@ -1,0 +1,20 @@
+{% if page.url == '/blog/' %}
+  {% set pagePosts = collections.posts %}
+{% elif page.url == '/til/' %}
+  {% set pagePosts = collections.TIL %}
+{% elif page.url == '/tiny-tutorials' %}
+  {% set pagePosts = collections.tinyTutorials %}
+{% endif %}
+
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = summary %}
+
+{% block content %}
+
+{% include "partials/page-header.html" %}
+
+{% include "partials/post-previews.html" %}
+
+{% endblock %}

@@ -1,4 +1,5 @@
 ---
   title: Blog
-  layout: layouts/base.html
+  summary: This is where I write about stuff! 
+  layout: layouts/post-index.html
 ---
