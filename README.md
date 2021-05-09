@@ -5,11 +5,11 @@
 - [x] navigation data and nav partial
   - [ ] better styling and active page indicators tho
 - [x] include nav partial in base layout
-- [ ] homepage layout _IN PROGRESS_
+- [ ] homepage layout _**IN PROGRESS**_
   - [ ] add filter for featured posts to use with post-preview partial
-- [ ] blog layout _IN PROGRESS_
+- [ ] blog layout _**IN PROGRESS**_
   - [ ] add styling
-- [ ] post list partial _IN PROGRESS_
+- [ ] post list partial _**IN PROGRESS**_
   - [ ] add styling
 - [ ] blog post page layout
 - [ ] blog post partial
