@@ -5,7 +5,7 @@
  */
  .wrapper {
   max-width: 70rem;
-  padding: 0 get-size('500');
+  padding: 0 map.get($size-scale, '500');
   margin-left: auto;
   margin-right: auto;
   position: relative;

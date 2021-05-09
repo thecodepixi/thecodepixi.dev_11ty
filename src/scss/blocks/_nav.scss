@@ -6,8 +6,8 @@
     flex-wrap: wrap;
 
     > * {
-      padding-top: get-size('400');
-      padding-inline-start: get-size('400');
+      padding-top: map.get($size-scale, '400');
+      padding-inline-start: map.get($size-scale, '400');
     }
   }
 }

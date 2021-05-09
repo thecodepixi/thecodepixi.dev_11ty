@@ -1,8 +1,17 @@
 .button {
   @extend .radius;
+
   padding: 0.5rem 1.5rem;
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  background: map.get($light-theme, dark-accent);
+  color: map.get($light-theme, primary-bg);
+  border: 2px solid;
+
+  &:hover {
+    background: map.get($light-theme, primary-bg);
+    color: map.get($light-theme, dark-accent);
+  }
 }
