@@ -1,6 +1,6 @@
 ---
   title: "TheCodePixi"
-  layout: "layouts/home.html"
+  layout: "layouts/page.html"
   summary: "Welcome to my personal site!"
 ---
 

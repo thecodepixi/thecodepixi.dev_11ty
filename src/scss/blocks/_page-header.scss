@@ -1,3 +1,11 @@
 .page-header {
   padding: map.get($size-scale,'800') 0;
+
+  &_heading {
+    font-size: map.get($size-scale, '700');
+  };
+
+  &_summary {
+    font-size: map.get($size-scale, '500')
+  };
 }
