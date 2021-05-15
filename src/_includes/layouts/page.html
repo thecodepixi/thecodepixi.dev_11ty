@@ -1,7 +1,9 @@
 {% extends "layouts/base.html" %}
 
 {% set pageHeaderTitle = title %} 
-{% set pageHeaderSummary = summary %}
+{% if not pageHeaderSummary %}
+  {% set pageHeaderSummary = summary %}
+{% endif %}
 {# {% set pageCriticalStyles = ['css/page.css'] %}  #}
 
 {% block content %}

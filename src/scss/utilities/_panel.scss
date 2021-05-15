@@ -1,5 +1,5 @@
 // Adds consitent space and padding for each full panel section
 .panel {
-  margin: map.get($size-scale, '700') 0;
-  padding: map.get($size-scale, '700') 0;
+  margin: map.get($size-scale, '300') 0;
+  padding: map.get($size-scale, '500') 0;
 }

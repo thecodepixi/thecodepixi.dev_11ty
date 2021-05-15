@@ -2,7 +2,7 @@
   <ul class="post_list flow">
     {% for post in pagePosts %}
       <li class="post_preview">
-       <a href="/blog{{ post.url }}"> {{ post.data.title }}</a> | {{ post.date | dateFilter }} <br> 
+       <a href="{{ post.url }}"> {{ post.data.title }}</a> | {{ post.date | dateFilter }} <br> 
         {% if post.data.summary %}
           <blockquote> {{ post.data.summary }} </blockquote> 
         {% endif %}
