@@ -1,6 +1,11 @@
 // use
 @use 'sass:map';
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 @import 'config';
 @import 'reset';
 @import 'dracula';

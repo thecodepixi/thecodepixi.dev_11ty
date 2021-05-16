@@ -27,16 +27,18 @@
     {% endfor %} {% endif %}
   </head>
   <body>
+    <a class="[ skip-link ] [ button ]" href="#main-content">
+      Skip to content
+    </a>
+    
     <div class="site-wrap">
-      <a class="[ skip-link ] [ button ]" href="#main-content">
-        Skip to content
-      </a>
-
-      {% include "partials/nav.html" %}
+    {% include "partials/nav.html" %}
 
       <main tab-index="-1" id="main-content">
         {% block content %} {{ content | safe }} {% endblock %}
       </main>
+
+    {% include "partials/footer.html" %}
     </div>
   </body>
 </html>

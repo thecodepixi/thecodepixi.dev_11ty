@@ -1,7 +1,6 @@
-<div class="[ site-head ]">
-  <nav class="[ nav ][ wrapper ]" aria-label="Primary">
-    <ul class="nav_list">
-      {% for item in nav.items %}
+  <footer class="[ nav ][ wrapper ]" aria-label="Footer">
+    <ul class="[ nav_list ][ nav_list_footer ]">
+      {% for item in footer.items %}
       <li>
         <a
           href="{{ item.url }}"
@@ -18,5 +17,4 @@
       </li>
       {% endfor %}
     </ul>
-  </nav>
-</div>
+  </footer>

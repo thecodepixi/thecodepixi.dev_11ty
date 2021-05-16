@@ -8,6 +8,7 @@
   &_summary {
     font-size: map.get($size-scale, '500');
     padding: map.get($size-scale, '300'), 0;
+    font-weight: bold;
 
     &_item {
       padding-bottom: map.get($size-scale, '300');

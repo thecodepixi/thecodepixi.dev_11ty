@@ -9,7 +9,7 @@ module.exports = (config) => {
   config.addCollection('posts', (collection) => {
     return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
   });
-  config.addCollection('TIL', (collection) => {
+  config.addCollection('todayILearned', (collection) => {
     return collection.getFilteredByGlob('./src/til/*.md');
   });
   config.addCollection('tinyTutorials', (collection) => {

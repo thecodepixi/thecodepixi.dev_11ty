@@ -1,7 +1,7 @@
 {% if page.url == '/blog/' %}
   {% set pagePosts = collections.posts %}
 {% elif page.url == '/til/' %}
-  {% set pagePosts = collections.TIL %}
+  {% set pagePosts = collections.todayILearned %}
 {% elif page.url == '/tiny-tutorials' %}
   {% set pagePosts = collections.tinyTutorials %}
 {% endif %}
@@ -14,7 +14,10 @@
 {% block content %}
 
 {% include "partials/page-header.html" %}
-
-{% include "partials/post-previews.html" %}
+{% if pagePosts %}
+  {% include "partials/post-previews.html" %}
+{% else %}
+  <p class="[ wrapper ][ page-content ]">No content found...yet!</p>
+{% endif %}
 
 {% endblock %}
