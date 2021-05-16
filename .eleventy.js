@@ -1,8 +1,11 @@
-const dateFilter = require("./src/filters/date-filter");
-const tagsFilter = require("./src/filters/tags-filter")
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+
+// Filters
+const dateFilter = require('./src/filters/date-filter');
+const tagsFilter = require('./src/filters/tags-filter');
 
 module.exports = (config) => {
-  // add filters 
+  // add filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('tagsFilter', tagsFilter);
   // add collections
@@ -15,6 +18,8 @@ module.exports = (config) => {
   config.addCollection('tinyTutorials', (collection) => {
     return collection.getFilteredByGlob('./src/tiny-tutorials/*.md');
   });
+  // plugins 
+  config.addPlugin(syntaxHighlight);
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
   return {

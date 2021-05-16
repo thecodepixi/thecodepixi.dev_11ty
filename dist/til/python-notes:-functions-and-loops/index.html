@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<title>Python Notes: Functions and Loops | TheCodePixi</title>
+<link rel="canonical" href="https://thecodepixi.dev/til/python-notes:-functions-and-loops/" />
+
+
+<meta property="og:site_name" content="TheCodePixi" />
+<meta property="og:title" content="Python Notes: Functions and Loops | TheCodePixi" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://thecodepixi.dev/til/python-notes:-functions-and-loops/" />
+
+
+
+
+  <meta name="description" content="My notes from &quot;An Informal Introduction to Python&quot;" />
+  <meta name="twitter:description" content="My notes from &quot;An Informal Introduction to Python&quot;" />
+  <meta property="og:description" content="My notes from &quot;An Informal Introduction to Python&quot;" />
+
+
+
+
+    <style>
+      body{display:flex;flex-direction:column}*,::after,::before{box-sizing:border-box}ol[class],ul[class]{padding:0}blockquote,body,dd,dl,figure,h1,h2,h3,h4,ol[class],p,ul[class]{margin:0}html{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}ol[class],ul[class]{list-style:none}a:not([class]){text-decoration-skip-ink:auto}img{max-width:100%;display:block}button,input,select,textarea{font:inherit}@media (prefers-reduced-motion:reduce){*{animation-duration:10ms!important;animation-iteration-count:1!important;transition-duration:10ms!important;scroll-behavior:auto!important}}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;font-size:1rem;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1.33rem;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#282a36}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#6272a4}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#ff79c6}.token.boolean,.token.number{color:#bd93f9}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#50fa7b}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#f1fa8c}.token.keyword{color:#8be9fd}.token.important,.token.regex{color:#ffb86c}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.flow>*+*{margin-top:var(--flow-space,1em)}.site-wrap{overflow-x:hidden;position:relative}.skip-link:not(:focus),.visually-hidden{border:0;clip:rect(0 0 0 0);height:auto;margin:0;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap}.wrapper{max-width:70rem;padding:0 1.33rem;margin-left:auto;margin-right:auto;position:relative}.button,.radius,pre[class*=language-]{border-radius:.5rem}.panel{margin:.75rem 0;padding:1.33rem 0}.headline{font-size:2.36rem}.headline::after{content:"."}.skip-link{position:absolute;top:1rem;left:1rem;z-index:99}.button{padding:.5rem 1.5rem;display:inline-block;text-transform:uppercase;text-decoration:none;text-align:center;background:#48ad7e;color:#fdfffc;border:2px solid}.button:hover{background:#fdfffc;color:#48ad7e}.nav{line-height:1;font-weight:700;font-size:1.33rem}.nav_list{display:flex;flex-wrap:wrap;justify-content:space-evenly}.nav_list>*{padding-top:1rem}.nav a{text-decoration:none;display:block;position:relative}.nav a[aria-current=page],.nav a[data-state=active]{color:#48ad7e}.nav a[aria-current=page]:before,.nav a[data-state=active]:before{content:"";display:block;width:100%;height:.25rem;position:absolute;top:100%;left:0;margin-top:.25rem;background:#a2ff38}.page-header{padding:1.77rem 0}.page-header_heading{font-size:2.36rem}.page-header_summary{font-size:1.33rem;padding:.75rem,0;font-weight:700}.page-header_summary_item{padding-bottom:.75rem}.page-content{text-align:justify;font-size:1.25rem}
+    </style>
+
+      
+  </head>
+  <body>
+    <a class="[ skip-link ] [ button ]" href="#main-content">
+      Skip to content
+    </a>
+    
+    <div class="site-wrap">
+    <div class="[ site-head ]">
+  <nav class="[ nav ][ wrapper ]" aria-label="Primary">
+    <ul class="nav_list">
+      
+      <li>
+        <a
+          href="/"
+          class="nav_link"
+          
+        >
+          Home</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/blog/"
+          class="nav_link"
+          
+        >
+          Blog</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/til/"
+          class="nav_link"
+           data-state="active"
+        >
+          TIL</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/tiny-tutorials/"
+          class="nav_link"
+          
+        >
+          Tiny Tutorials</a
+        >
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+
+
+      <main tab-index="-1" id="main-content">
+        
+<article>
+  <div class="page-header">
+  <div class="[ wrapper ] [ flow ]">
+    <h1 class="[ page-header_heading ]" data-highlight="primary">
+      Python Notes: Functions and Loops
+    </h1>
+    
+    <div class="[ page-header_summary ]">
+      
+  <p class="page-header_summary_item"><time datetime="Fri May 14 2021 20:00:00 GMT-0400 (Eastern Daylight Time)" class="page-header_summary_date">Sat, 15 May 2021</time></p>
+  <blockquote class="page-header_summary_item">My notes from &quot;An Informal Introduction to Python&quot;</blockquote>
+  <p>tags: python - beginner</p>
+
+    </div>
+    
+  </div>
+</div>
+
+  <div class="panel">
+    <div class="[ page-content ] [ flow wrapper ]">
+      <h2>Functions n' Loops n' Stuff</h2>
+<ul>
+<li>
+<p>You can <code>else</code> in a loop apparently? It runs when there is no <code>break</code></p>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">for</span> n <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">:</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>         <span class="token keyword">if</span> n <span class="token operator">%</span> x <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>             <span class="token keyword">print</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token string">'equals'</span><span class="token punctuation">,</span> x<span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">,</span> n<span class="token operator">//</span>x<span class="token punctuation">)</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>             <span class="token keyword">break</span> <span class="token comment"># break out of this loop, move to the next n</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token keyword">else</span><span class="token punctuation">:</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>         <span class="token comment"># loop fell through without finding a factor</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>         <span class="token keyword">print</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token string">'is a prime number'</span><span class="token punctuation">)</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><br><span class="token number">2</span> <span class="token keyword">is</span> a prime number<br><span class="token number">3</span> <span class="token keyword">is</span> a prime number<br><span class="token number">4</span> equals <span class="token number">2</span> <span class="token operator">*</span> <span class="token number">2</span><br><span class="token number">5</span> <span class="token keyword">is</span> a prime number<br><span class="token number">6</span> equals <span class="token number">2</span> <span class="token operator">*</span> <span class="token number">3</span><br><span class="token number">7</span> <span class="token keyword">is</span> a prime number<br><span class="token number">8</span> equals <span class="token number">2</span> <span class="token operator">*</span> <span class="token number">4</span><br><span class="token number">9</span> equals <span class="token number">3</span> <span class="token operator">*</span> <span class="token number">3</span></code></pre>
+</li>
+<li>
+<p><code>break</code> and <code>continue</code> work the same as in other languages</p>
+</li>
+<li>
+<p><code>pass</code> does nothing and can be used when a statement is required but should have no effect, or can be used as a placeholder while coding, or for creating minimal classes</p>
+</li>
+<li>
+<p>Function arguments follow a specific order: <code>def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2)</code></p>
+<ul>
+<li>The first two args are positional</li>
+<li><code>/</code> separates the positional args from other args</li>
+<li>the third arg can be either positional or keyword</li>
+<li><code>*</code> separates the keyword only args</li>
+<li><code>kwd1</code> and <code>kwd2</code> are named keyword-only args</li>
+</ul>
+<pre class="language-python"><code class="language-python">f<span class="token punctuation">(</span>some_arg<span class="token punctuation">,</span> some_other_arg<span class="token punctuation">,</span> <span class="token operator">/</span> <span class="token punctuation">,</span> positional_arg<span class="token punctuation">,</span> kwd <span class="token operator">=</span> <span class="token string">"keyword arg"</span><span class="token punctuation">,</span> <span class="token operator">*</span> <span class="token punctuation">,</span> kwd1 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> kwd2 <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> </code></pre>
+</li>
+<li>
+<p>Add documentation strings to functions with triple quotation marks</p>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">def</span> <span class="token function">a_func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token triple-quoted-string string">"""Do nothing, but document it.<br>...<br>...     No really, it doesn't do anything.<br>...     """</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token keyword">pass</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><br><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span>a_func<span class="token punctuation">.</span>__doc__<span class="token punctuation">)</span><br>Do nothing<span class="token punctuation">,</span> but document it<span class="token punctuation">.</span><br><br>  No really<span class="token punctuation">,</span> it doesn't do anything<span class="token punctuation">.</span></code></pre>
+</li>
+</ul>
+
+    </div>
+  </div>
+</article>
+
+      </main>
+
+      <footer class="[ nav ][ wrapper ]" aria-label="Footer">
+    <ul class="[ nav_list ][ nav_list_footer ]">
+      
+      <li>
+        <a
+          href="https://twitter.com/thecodepixi"
+          class="nav_link"
+          
+        >
+          Twitter</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="https://github.com/thecodepixi"
+          class="nav_link"
+          
+        >
+          GitHub</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="https://dev.to/thecodepixi"
+          class="nav_link"
+          
+        >
+          Dev.to</a
+        >
+      </li>
+      
+    </ul>
+  </footer>
+
+    </div>
+  </body>
+</html>

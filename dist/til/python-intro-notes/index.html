@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<title>Python Intro Notes | TheCodePixi</title>
+<link rel="canonical" href="https://thecodepixi.dev/til/python-intro-notes/" />
+
+
+<meta property="og:site_name" content="TheCodePixi" />
+<meta property="og:title" content="Python Intro Notes | TheCodePixi" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://thecodepixi.dev/til/python-intro-notes/" />
+
+
+
+
+  <meta name="description" content="My notes from &quot;An Informal Introduction to Python&quot;" />
+  <meta name="twitter:description" content="My notes from &quot;An Informal Introduction to Python&quot;" />
+  <meta property="og:description" content="My notes from &quot;An Informal Introduction to Python&quot;" />
+
+
+
+
+    <style>
+      body{display:flex;flex-direction:column}*,::after,::before{box-sizing:border-box}ol[class],ul[class]{padding:0}blockquote,body,dd,dl,figure,h1,h2,h3,h4,ol[class],p,ul[class]{margin:0}html{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}ol[class],ul[class]{list-style:none}a:not([class]){text-decoration-skip-ink:auto}img{max-width:100%;display:block}button,input,select,textarea{font:inherit}@media (prefers-reduced-motion:reduce){*{animation-duration:10ms!important;animation-iteration-count:1!important;transition-duration:10ms!important;scroll-behavior:auto!important}}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#282a36}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#6272a4}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#ff79c6}.token.boolean,.token.number{color:#bd93f9}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#50fa7b}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#f1fa8c}.token.keyword{color:#8be9fd}.token.important,.token.regex{color:#ffb86c}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.flow>*+*{margin-top:var(--flow-space,1em)}.site-wrap{overflow-x:hidden;position:relative}.skip-link:not(:focus),.visually-hidden{border:0;clip:rect(0 0 0 0);height:auto;margin:0;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap}.wrapper{max-width:70rem;padding:0 1.33rem;margin-left:auto;margin-right:auto;position:relative}.button,.radius{border-radius:.25rem}.panel{margin:.75rem 0;padding:1.33rem 0}.headline{font-size:2.36rem}.headline::after{content:"."}.skip-link{position:absolute;top:1rem;left:1rem;z-index:99}.button{padding:.5rem 1.5rem;display:inline-block;text-transform:uppercase;text-decoration:none;text-align:center;background:#48ad7e;color:#fdfffc;border:2px solid}.button:hover{background:#fdfffc;color:#48ad7e}.nav{line-height:1;font-weight:700;font-size:1.33rem}.nav_list{display:flex;flex-wrap:wrap;justify-content:space-evenly}.nav_list>*{padding-top:1rem}.nav a{text-decoration:none;display:block;position:relative}.nav a[aria-current=page],.nav a[data-state=active]{color:#48ad7e}.nav a[aria-current=page]:before,.nav a[data-state=active]:before{content:"";display:block;width:100%;height:.25rem;position:absolute;top:100%;left:0;margin-top:.25rem;background:#a2ff38}.page-header{padding:1.77rem 0}.page-header_heading{font-size:2.36rem}.page-header_summary{font-size:1.33rem;padding:.75rem,0;font-weight:700}.page-header_summary_item{padding-bottom:.75rem}.page-content{text-align:justify;font-size:1.25rem}
+    </style>
+
+      
+  </head>
+  <body>
+    <a class="[ skip-link ] [ button ]" href="#main-content">
+      Skip to content
+    </a>
+    
+    <div class="site-wrap">
+    <div class="[ site-head ]">
+  <nav class="[ nav ][ wrapper ]" aria-label="Primary">
+    <ul class="nav_list">
+      
+      <li>
+        <a
+          href="/"
+          class="nav_link"
+          
+        >
+          Home</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/blog/"
+          class="nav_link"
+          
+        >
+          Blog</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/til/"
+          class="nav_link"
+           data-state="active"
+        >
+          TIL</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/tiny-tutorials/"
+          class="nav_link"
+          
+        >
+          Tiny Tutorials</a
+        >
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+
+
+      <main tab-index="-1" id="main-content">
+        
+<article>
+  <div class="page-header">
+  <div class="[ wrapper ] [ flow ]">
+    <h1 class="[ page-header_heading ]" data-highlight="primary">
+      Python Intro Notes
+    </h1>
+    
+    <div class="[ page-header_summary ]">
+      
+  <p class="page-header_summary_item"><time datetime="Fri May 14 2021 20:00:00 GMT-0400 (Eastern Daylight Time)" class="page-header_summary_date">Sat, 15 May 2021</time></p>
+  <blockquote class="page-header_summary_item">My notes from &quot;An Informal Introduction to Python&quot;</blockquote>
+  <p>tags: python - beginner</p>
+
+    </div>
+    
+  </div>
+</div>
+
+  <div class="panel">
+    <div class="[ page-content ] [ flow wrapper ]">
+      <h2>Numbers</h2>
+<ul>
+<li><code>/</code> returns a float by default</li>
+</ul>
+<pre><code class="language-python">&gt;&gt;&gt; 17 / 3  # classic division returns a float
+5.666666666666667
+</code></pre>
+<ul>
+<li><code>//</code> will return the floor-rounded result of division (essentially discards the decimal)</li>
+</ul>
+<pre><code class="language-python">&gt;&gt;&gt; 17 // 3  # floor division discards the fractional part
+5
+</code></pre>
+<ul>
+<li>Mixing number &quot;types&quot; is allowed</li>
+</ul>
+<pre><code class="language-python">&gt;&gt;&gt; 4 * 3.75 - 1
+14.0
+</code></pre>
+<h2>Strings</h2>
+<ul>
+<li>Strings can be concatenated using <code>n * &lt;string&gt;</code></li>
+</ul>
+<pre><code class="language-python">&gt;&gt;&gt; 3 * 'un' + 'ium'
+'unununium'
+</code></pre>
+<ul>
+<li>Adjacent string literals are auto-concatenated</li>
+</ul>
+<pre><code class="language-python">&gt;&gt;&gt; 'Py' 'thon'
+'Python' 
+</code></pre>
+<ul>
+<li>Access string index ranges using the <code>[x:y]</code> syntax</li>
+</ul>
+<pre><code class="language-python">&gt;&gt;&gt; word = 'Python'
+&gt;&gt;&gt; word[0:2]
+'Py'
+&gt;&gt;&gt; word[2:5]
+'tho'
+&gt;&gt;&gt;
+</code></pre>
+
+    </div>
+  </div>
+</article>
+
+      </main>
+
+      <footer class="[ nav ][ wrapper ]" aria-label="Footer">
+    <ul class="[ nav_list ][ nav_list_footer ]">
+      
+      <li>
+        <a
+          href="https://twitter.com/thecodepixi"
+          class="nav_link"
+          
+        >
+          Twitter</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="https://github.com/thecodepixi"
+          class="nav_link"
+          
+        >
+          GitHub</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="https://dev.to/thecodepixi"
+          class="nav_link"
+          
+        >
+          Dev.to</a
+        >
+      </li>
+      
+    </ul>
+  </footer>
+
+    </div>
+  </body>
+</html>
