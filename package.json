@@ -12,6 +12,7 @@
     "concurrently": "^6.0.2",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "sass": "^1.32.11"
