@@ -13,7 +13,7 @@ module.exports = (config) => {
     return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
   });
   config.addCollection('todayILearned', (collection) => {
-    return collection.getFilteredByGlob('./src/til/*.md');
+    return [...collection.getFilteredByGlob('./src/til/*.md')].reverse();
   });
   config.addCollection('tinyTutorials', (collection) => {
     return collection.getFilteredByGlob('./src/tiny-tutorials/*.md');

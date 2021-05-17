@@ -24,14 +24,14 @@
 
 
 
-<title>Python Notes: Strings | TheCodePixi</title>
-<link rel="canonical" href="https://thecodepixi.dev/til/python-notes:-strings/" />
+<title>Python Notes: Tuples | TheCodePixi</title>
+<link rel="canonical" href="https://thecodepixi.dev/til/python-notes:-tuples/" />
 
 
 <meta property="og:site_name" content="TheCodePixi" />
-<meta property="og:title" content="Python Notes: Strings | TheCodePixi" />
+<meta property="og:title" content="Python Notes: Tuples | TheCodePixi" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://thecodepixi.dev/til/python-notes:-strings/" />
+<meta property="og:url" content="https://thecodepixi.dev/til/python-notes:-tuples/" />
 
 
 
@@ -110,12 +110,12 @@
   <div class="page-header">
   <div class="[ wrapper ] [ flow ]">
     <h1 class="[ page-header_heading ]" data-highlight="primary">
-      Python Notes: Strings
+      Python Notes: Tuples
     </h1>
     
     <div class="[ page-header_summary ]">
       
-  <p class="page-header_summary_item"><time datetime="Fri May 14 2021 20:00:00 GMT-0400 (Eastern Daylight Time)" class="page-header_summary_date">Sat, 15 May 2021</time></p>
+  <p class="page-header_summary_item"><time datetime="Sat May 15 2021 20:00:00 GMT-0400 (Eastern Daylight Time)" class="page-header_summary_date">Sun, 16 May 2021</time></p>
   <blockquote class="page-header_summary_item">My notes from &quot;An Informal Introduction to Python&quot;</blockquote>
   <p>tags: python - beginner</p>
 
@@ -126,35 +126,16 @@
 
   <div class="panel">
     <div class="[ page-content ] [ flow wrapper ]">
-      <h2>Strings</h2>
+      <h2>Tuples</h2>
 <ul>
-<li>
-<p>Strings can be concatenated using <code>n * &lt;string&gt;</code></p>
-<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token number">3</span> <span class="token operator">*</span> <span class="token string">'un'</span> <span class="token operator">+</span> <span class="token string">'ium'</span><br><span class="token string">'unununium'</span></code></pre>
+<li>comma separated, surrounded by parentheses</li>
+<li>immutable, but can contain mutable objects (like lists)</li>
+<li>can be any length</li>
+<li>access items by index the same way as strings and lists</li>
+<li>a &quot;singleton&quot; is a tuple with only one element<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> singleton <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">,</span><br><span class="token operator">>></span><span class="token operator">></span> singleton<br><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">,</span><span class="token punctuation">)</span></code></pre>
 </li>
-<li>
-<p>Adjacent string literals are auto-concatenated</p>
-<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token string">'Py'</span> <span class="token string">'thon'</span><br><span class="token string">'Python'</span> </code></pre>
-</li>
-<li>
-<p>Slice a string with index ranges, using the <code>[x:y]</code> syntax</p>
-<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> word <span class="token operator">=</span> <span class="token string">'Python'</span><br><span class="token operator">>></span><span class="token operator">></span> word<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><br><span class="token string">'Py'</span><br><span class="token operator">>></span><span class="token operator">></span> word<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><br><span class="token string">'tho'</span><br><span class="token operator">>></span><span class="token operator">></span></code></pre>
-</li>
-<li>
-<p>Removing the first or last index slices the portion of the string up to, or from, the given index</p>
-<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> word<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><br><span class="token string">'Py'</span><br><span class="token operator">>></span><span class="token operator">></span> word<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span><br><span class="token string">'thon'</span><br><span class="token operator">>></span><span class="token operator">></span></code></pre>
-</li>
-<li>
-<p>Slice a copy of the full string by leaving out both indexes</p>
-<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> word<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><br><span class="token string">'Python'</span></code></pre>
-</li>
-<li>
-<p>Python strings are immutable. Use slicing to alter a string when needed.</p>
-<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> word<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'J'</span><br>Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span><br>  File <span class="token string">"&lt;stdin>"</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span><br>TypeError<span class="token punctuation">:</span> <span class="token string">'str'</span> <span class="token builtin">object</span> does <span class="token keyword">not</span> support item assignment<br><span class="token operator">>></span><span class="token operator">></span> <span class="token string">'J'</span> <span class="token operator">+</span> word<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><br><span class="token string">'Jython'</span><br><span class="token operator">>></span><span class="token operator">></span> word<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'py'</span><br><span class="token string">'Pypy'</span></code></pre>
-</li>
-<li>
-<p>Get a strings length using <code>len()</code></p>
-<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> s <span class="token operator">=</span> <span class="token string">'supercalifragilisticexpialidocious'</span><br><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><br><span class="token number">34</span></code></pre>
+<li>you can also create empty tuples (but I'm not sure yet why you would?)</li>
+<li>elements in a tuple are most often accessed via &quot;unpacking&quot; (which feels a lot like destructuring)<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> t <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><br><span class="token operator">>></span><span class="token operator">></span> x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> t<br><span class="token operator">>></span><span class="token operator">></span> x<br><span class="token number">1</span><br><span class="token operator">>></span><span class="token operator">></span> y<br><span class="token number">2</span><br><span class="token operator">>></span><span class="token operator">></span> z<br><span class="token number">3</span></code></pre>
 </li>
 </ul>
 

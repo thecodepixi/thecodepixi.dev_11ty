@@ -1,14 +1,8 @@
 // use
 @use 'sass:map';
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 @import 'config';
 @import 'reset';
-@import 'dracula';
 
 // import utilities
 @import 'utilities/flow';
@@ -18,6 +12,7 @@ body {
 @import 'utilities/radius';
 @import 'utilities/panel';
 @import 'utilities/headline';
+@import 'utilities/dracula.scss';
 
 // import blocks
 @import 'blocks/skip-link';
