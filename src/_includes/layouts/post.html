@@ -1,8 +1,0 @@
-
-{% set pageHeaderSummary %}
-  <p class="page-header_summary_item"><time datetime="{{ date }}" class="page-header_summary_date">{{ date | dateFilter }}</time></p>
-  <blockquote class="page-header_summary_item">{{ summary }}</blockquote>
-  <p>tags: {{ tags | tagsFilter }}</p>
-{% endset %}
-
-{% extends "layouts/page.html" %}
