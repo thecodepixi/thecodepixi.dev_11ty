@@ -24,21 +24,17 @@
 
 
 
-<title>This is a blog post | TheCodePixi</title>
-<link rel="canonical" href="https://thecodepixi.github.io/thecodepixi.dev_11ty/blog/this-is-a-blog-post/" />
+<title>Easy decrementing iteration in Ruby | TheCodePixi</title>
+<link rel="canonical" href="https://thecodepixi.github.io/thecodepixi.dev_11ty/til/easy-decrementing-iteration-in-ruby/" />
 
 
 <meta property="og:site_name" content="TheCodePixi" />
-<meta property="og:title" content="This is a blog post | TheCodePixi" />
+<meta property="og:title" content="Easy decrementing iteration in Ruby | TheCodePixi" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://thecodepixi.github.io/thecodepixi.dev_11ty/blog/this-is-a-blog-post/" />
+<meta property="og:url" content="https://thecodepixi.github.io/thecodepixi.dev_11ty/til/easy-decrementing-iteration-in-ruby/" />
 
 
 
-
-  <meta name="description" content="This is a test blog post so I can see what they look like on the page." />
-  <meta name="twitter:description" content="This is a test blog post so I can see what they look like on the page." />
-  <meta property="og:description" content="This is a test blog post so I can see what they look like on the page." />
 
 
 
@@ -73,7 +69,7 @@
         <a
           href="https://thecodepixi.github.io/thecodepixi.dev_11ty/blog/"
           class="nav_link"
-           data-state="active"
+          
         >
           Blog</a
         >
@@ -83,7 +79,7 @@
         <a
           href="https://thecodepixi.github.io/thecodepixi.dev_11ty/til/"
           class="nav_link"
-          
+           data-state="active"
         >
           TIL</a
         >
@@ -110,14 +106,14 @@
   <div class="page-header">
   <div class="[ wrapper ] [ flow ]">
     <h1 class="[ page-header_heading ]" data-highlight="primary">
-      This is a blog post
+      Easy decrementing iteration in Ruby
     </h1>
     
     <div class="[ page-header_summary ]">
       
-  <p class="page-header_summary_item"><time datetime="Thu May 06 2021 20:00:00 GMT-0400 (Eastern Daylight Time)" class="page-header_summary_date">Fri, 07 May 2021</time></p>
-  <blockquote class="page-header_summary_item">This is a test blog post so I can see what they look like on the page.</blockquote>
-  <p>tags: blog - test - featured</p>
+  <p class="page-header_summary_item"><time datetime="Sun May 16 2021 20:00:00 GMT-0400 (Eastern Daylight Time)" class="page-header_summary_date">Mon, 17 May 2021</time></p>
+  <blockquote class="page-header_summary_item"></blockquote>
+  <p>tags: ruby</p>
 
     </div>
     
@@ -126,7 +122,9 @@
 
   <div class="panel">
     <div class="[ page-content ] [ flow wrapper ]">
-      <p>Some content etc etc</p>
+      <p>Ruby has a built in method <code>downto</code> which allows for easy decrementing when you have a known starting and stopping limit:</p>
+<pre class="language-ruby"><code class="language-ruby"><span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>downto<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">each</span><span class="token punctuation">{</span> <span class="token operator">|</span>i<span class="token operator">|</span> puts i <span class="token punctuation">}</span><br><span class="token number">5</span><br><span class="token number">4</span><br><span class="token number">3</span><br><span class="token number">2</span><br><span class="token number">1</span><br><span class="token number">0</span><br><span class="token operator">=</span><span class="token operator">></span> <span class="token number">5</span></code></pre>
+<p><em><code>downto</code> returns an <code>Enumerator</code> instance.</em></p>
 
     </div>
   </div>
